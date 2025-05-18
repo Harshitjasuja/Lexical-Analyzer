@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Analyzer - Team Architechs</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/material.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">LA</div>
+            <h1>Lexical Analyzer</h1>
+        </div>
+        <div class="team-info">
+            <p><strong>Team Architechs</strong> | ID: CD-VI-T155</p>
+            <p>Harshit Jasuja | Shivendra Srivastava | Yashika Dixit</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="controls">
+                <select id="language-select">
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="cpp">C++</option>
+                </select>
+                <button id="analyze-btn">Analyze</button>
+                <button id="clear-btn">Clear</button>
+                <button id="sample-btn">Load Sample</button>
+            </div>
+            <div id="code-editor" class="code-editor"></div>
+        </div>
+
+        <div class="card">
+            <div class="tab-container">
+                <div class="tab active" data-tab="tokens">Tokens</div>
+                <div class="tab" data-tab="errors">Errors</div>
+                <div class="tab" data-tab="statistics">Statistics</div>
+            </div>
+            
+            <div class="tab-content active" id="tokens-tab">
+                <div id="token-stream" class="token-stream">
+                    <div class="token-display" id="token-display"></div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--keyword-color);"></div>
+                        <span>Keyword</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--identifier-color);"></div>
+                        <span>Identifier</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--literal-color);"></div>
+                        <span>Literal</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--operator-color);"></div>
+                        <span>Operator</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--separator-color);"></div>
+                        <span>Separator</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--comment-color);"></div>
+                        <span>Comment</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--error-color);"></div>
+                        <span>Error</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="errors-tab">
+                <div id="error-list" class="error-list">
+                    <p>No errors found.</p>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="statistics-tab">
+                <div id="token-statistics" class="statistics">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total-tokens">0</div>
+                        <div class="stat-label">Total Tokens</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="keywords">0</div>
+                        <div class="stat-label">Keywords</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="identifiers">0</div>
+                        <div class="stat-label">Identifiers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="literals">0</div>
+                        <div class="stat-label">Literals</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="operators">0</div>
+                        <div class="stat-label">Operators</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="separators">0</div>
+                        <div class="stat-label">Separators</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="comments">0</div>
+                        <div class="stat-label">Comments</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="error-count">0</div>
+                        <div class="stat-label">Errors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card visualization-container">
+            <h3>Lexical Analysis Visualization</h3>
+            <div id="state-machine-container" class="state-machine-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
