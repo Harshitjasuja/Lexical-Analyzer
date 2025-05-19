@@ -22,7 +22,7 @@ A web-based interactive tool for **lexical analysis and tokenization** of code w
 
 ##  Project Structure
 
-Lexical-Analyzer
+-Lexical-Analyzer
 -├── index.html # Main HTML interface
 -├── styles.css # CSS styling
 -├── scripts.js # JavaScript logic (analysis, parsing, UI)
@@ -49,9 +49,9 @@ Lexical-Analyzer
 -HTML, CSS, JavaScript
 
 # Team Architechs
--Harshit Jasuja
--Shivendra Srivastava
--Yashika Dixit
+1. Harshit Jasuja
+2. Shivendra Srivastava
+3. Yashika Dixit
 
 # License
 This project is academic and open for learning purposes. Feel free to fork and adapt!
