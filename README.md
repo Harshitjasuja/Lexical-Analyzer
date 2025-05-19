@@ -2,31 +2,31 @@
 A web-based interactive tool for **lexical analysis and tokenization** of code written in **Java, Python, or C++**. Built by **Team Architechs** for Compiler Design coursework, the tool showcases how source code is tokenized, parsed, and visualized.
 
 ##  Features
--  **Interactive Code Editor** (CodeMirror)
+-  **Interactive Code Editor** (Visual Studio Code)
 -  **Lexical Analysis**:
-  - Identifies keywords, identifiers, literals, operators, separators, comments
-  - Supports Java, Python, and C++
+    - Identifies keywords, identifiers, literals, operators, separators, comments
+    - Supports Java, Python, and C++
 -  **Error Detection**:
-  - Unclosed strings, unmatched brackets, invalid identifiers
+    - Unclosed strings, unmatched brackets, invalid identifiers
 -  **Token Statistics Dashboard**
 -  **Parse Tree Generator**:
-  - Builds a simple Abstract Syntax Tree (AST)
-  - Visualized using D3.js
+    - Builds a simple Abstract Syntax Tree (AST)
+    - Visualized using D3.js
 -  **Symbol Table Extraction**
 -  **FSM-based Token Flow Visualization**
 
-## 🧪 Supported Languages
+##  Supported Languages
 - Java
 - Python
 - C++
 
 ##  Project Structure
 
--Lexical-Analyzer
--├── index.html # Main HTML interface
--├── styles.css # CSS styling
--├── scripts.js # JavaScript logic (analysis, parsing, UI)
--└── README.md # Project overview
+- Lexical-Analyzer
+- ├── index.html # Main HTML interface
+- ├── styles.css # CSS styling
+- ├── scripts.js # JavaScript logic (analysis, parsing, UI)
+- └── README.md # Project overview
 
 
 ## 🛠️ How to Use
@@ -44,9 +44,9 @@ A web-based interactive tool for **lexical analysis and tokenization** of code w
 -Parse Tree
 
 # Built With
--CodeMirror – Code editor
--D3.js – Data visualization
--HTML, CSS, JavaScript
+1. CodeMirror – Visual Studio Code
+2. D3.js – Data visualization
+3. Coding Languages Used - HTML, CSS, JavaScript
 
 # Team Architechs
 1. Harshit Jasuja
